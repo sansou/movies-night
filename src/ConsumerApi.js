@@ -1,7 +1,6 @@
-import './App.css';
-import ConsumerApi from './ConsumerApi';
+import React, { useState, useEffect } from 'react';
 
-function App() {
+const ConsumerApi = () => {
   const fetch = require('node-fetch');
 
   const url = 'https://api.themoviedb.org/3/discover/movie';
@@ -19,9 +18,10 @@ function App() {
     .catch(err => console.error('error:' + err));
 
   return (
-    <div className="App">
+    <div className='CosumerApi'>
+      <a>{{ fetch }}</a>
     </div>
   );
-}
+};
 
-export default App;
+export default ConsumerApi;
